@@ -19,12 +19,15 @@ export default ProductView = ({...props}) => {
   const [productFocus, setProductFocus] = useState(null);
   const [suggestedProducts, setSuggestedProducts] = useState(null);
 
-  //   TODO: async function call once
   useEffect(() => {
-    let res = API.featchProductFocus(props.route.name);
-    let suggested = API.featchProductSuggestions(res);
-    setProductFocus(res);
-    setSuggestedProducts(suggested);
+    async function fetchUsersPosts() {
+      let res = await API.featchProductFocus(props.route.name);
+      let suggested = await API.featchProductSuggestions(res);
+      setProductFocus(res);
+      setSuggestedProducts(suggested);
+    }
+
+    fetchUsersPosts();
   }, []);
 
   return (
@@ -55,7 +58,7 @@ const styles = StyleSheet.create({
   },
   searchBar: {
     width: SW - 20,
-    paddingLeft: 10, 
+    paddingLeft: 10,
     paddingRight: 10,
     margin: 10,
     borderRadius: 10,
