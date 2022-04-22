@@ -1,0 +1,42 @@
+[
+  {
+    "productImage": "",
+    "title": "Tiger Medium Red",
+    "price": 250.0,
+    "currency": "AED",
+    "avaliableSizes": ["S", "M", "L", "XL"],
+    "colors": ["#53ac88", "#5598aa", "#f7fafa", "#030504"],
+    "description": "A product description is the marketing copy that explains what a product is and why it's worth purchasing. The purpose of a product description is to supply customers with important information about the features and benefits of the product so they're compelled to buy.",
+    "catagorie": "MEN"
+  },
+  {
+    "productImage": "",
+    "title": "Womens long shirt",
+    "price": 250.0,
+    "currency": "AED",
+    "avaliableSizes": ["S", "M", "L", "XL"],
+    "colors": ["#53ac88", "#5598aa", "#f7fafa", "#030504"],
+    "description": "A product description is the marketing copy that explains what a product is and why it's worth purchasing. The purpose of a product description is to supply customers with important information about the features and benefits of the product so they're compelled to buy.",
+    "catagorie": "WOMEN"
+  },
+  {
+    "productImage": "",
+    "title": "Tiger Medium Red",
+    "price": 250.0,
+    "currency": "AED",
+    "avaliableSizes": ["S", "M", "L", "XL"],
+    "colors": ["#53ac88", "#5598aa", "#f7fafa", "#030504"],
+    "description": "A product description is the marketing copy that explains what a product is and why it's worth purchasing. The purpose of a product description is to supply customers with important information about the features and benefits of the product so they're compelled to buy.",
+    "catagorie": "MEN"
+  },
+  {
+    "productImage": "",
+    "title": "Womens long shirt",
+    "price": 250.0,
+    "currency": "AED",
+    "avaliableSizes": ["S", "M", "L", "XL"],
+    "colors": ["#53ac88", "#5598aa", "#f7fafa", "#030504"],
+    "description": "A product description is the marketing copy that explains what a product is and why it's worth purchasing. The purpose of a product description is to supply customers with important information about the features and benefits of the product so they're compelled to buy.",
+    "catagorie": "WOMEN"
+  }
+]
