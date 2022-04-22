@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<Text
+  style={
+    Object {
+      "fontSize": 28,
+      "textAlign": "center",
+    }
+  }
+>
+  Loading...
+</Text>
+`;
+
+exports[`renders correctly 2`] = `
+<Text
+  style={
+    Object {
+      "color": "red",
+      "fontSize": 18,
+      "textAlign": "center",
+    }
+  }
+/>
+`;
+
+exports[`renders failed item correctly 1`] = `
+<Text
+  style={
+    Object {
+      "color": "red",
+      "fontSize": 18,
+      "textAlign": "center",
+    }
+  }
+>
+  Please try again later
+</Text>
+`;
+
+exports[`renders loading item correctly 1`] = `
+<Text
+  style={
+    Object {
+      "fontSize": 28,
+      "textAlign": "center",
+    }
+  }
+>
+  Loading...
+</Text>
+`;

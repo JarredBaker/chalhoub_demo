@@ -24,3 +24,7 @@ const styles = StyleSheet.create({
 FailedItem.propTypes = {
   text: propTypes.string.isRequired,
 };
+
+FailedItem.defaultProps = {
+  text: 'Please try again later',
+};
