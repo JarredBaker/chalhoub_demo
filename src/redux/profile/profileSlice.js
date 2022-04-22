@@ -1,18 +1,16 @@
 import {createSlice, createAsyncThunk} from '@reduxjs/toolkit';
+import * as API from '../../api/profile/profile.api';
 
 const initialState = {
   profileLoadStatus: 'idle',
   profile: {},
 };
 
-// TODO: replace this with an api call.
 export const fetchTheProfile = createAsyncThunk(
   'profile/fetchTheProfile',
   async () => {
-    return {
-      userName: 'Jarred',
-      id: 1120,
-    };
+    let profile = await API.featchProfile();
+    return profile;
   },
 );
 
