@@ -1,4 +1,6 @@
 import products from '../../assets/products.json';
+import axios from 'axios';
+import * as CONFIG from '../../env/config';
 
 /**
  *
@@ -9,14 +11,24 @@ import products from '../../assets/products.json';
  *
  *
  */
-export const featchProductFocus = catagorie => {
+export const featchProductFocus = async catagorie => {
   let res = {};
 
   /** based on the catagorie passed into the function. Fetched filtered products. */
-  for (let i = 0; i < products.length; i++) {
-    if (products[i].catagorie === catagorie) {
-      res = {...products[i]};
-      break;
+  if (CONFIG.hasStorageAccess) {
+    const response = await axios.get(CONFIG.productsURL);
+    for (let i = 0; i < response.data.length; i++) {
+      if (response.data[i].catagorie === catagorie) {
+        res = {...response.data[i]};
+        break;
+      }
+    }
+  } else {
+    for (let i = 0; i < products.length; i++) {
+      if (products[i].catagorie === catagorie) {
+        res = {...products[i]};
+        break;
+      }
     }
   }
 
@@ -32,11 +44,16 @@ export const featchProductFocus = catagorie => {
  *
  *
  */
-export const featchProductSuggestions = productFocused => {
+export const featchProductSuggestions = async productFocused => {
   let res = {};
 
   /** based on the catagorie passed into the function. Fetched filtered products. */
-  res = [...products];
+  if (CONFIG.hasStorageAccess) {
+    const response = await axios.get(CONFIG.productsURL);
+    res = response.data;
+  } else {
+    res = [...products];
+  }
 
   return res;
 };
